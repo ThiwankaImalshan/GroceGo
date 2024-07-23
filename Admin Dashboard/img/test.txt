@@ -1,0 +1,422 @@
+                               
+                               
+                               
+                               
+                               ---------------------------Orders-------------------------
+                               
+                               <!-- <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status">Delivered</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status">Pending</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status">Return</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status">In Progress</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status">Delivered</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status">Pending</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status">Return</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status">In Progress</Span></td>
+                                    <td>
+                                        <a href="update" class="btn-update">Update</a>
+                                        <a href="delete" class="btn-delete">Delete</a>
+                                    </td>
+                                </tr> -->
+
+
+
+
+
+
+                                ---------------------------Customers-------------------------
+
+                                <!-- <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr> -->
+
+
+
+
+
+
+
+                            ---------------------------Delivery Details-------------------------
+
+                            <!-- <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status delivered">Delivered</Span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status pending">Pending</Span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status return">Return</Span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status inProgress">In Progress</Span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status delivered">Delivered</Span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status pending">Pending</Span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Paid</td>
+                                    <td><Span class="status return">Return</Span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apple</td>
+                                    <td>Rs. 100</td>
+                                    <td>Due</td>
+                                    <td><Span class="status inProgress">In Progress</Span></td>
+                                </tr> -->
+
+
+
+
+
+
+
+                            ---------------------------Delivers-------------------------
+
+                            <!-- <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>David <br><span>Italy</span></h4>
+                                </td>
+                            </tr> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+                                    <!-- <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Paid</td>
+                                        <td><Span class="status delivered">Delivered</Span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Due</td>
+                                        <td><Span class="status pending">Pending</Span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Paid</td>
+                                        <td><Span class="status return">Return</Span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Due</td>
+                                        <td><Span class="status inProgress">In Progress</Span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Paid</td>
+                                        <td><Span class="status delivered">Delivered</Span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Due</td>
+                                        <td><Span class="status pending">Pending</Span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Paid</td>
+                                        <td><Span class="status return">Return</Span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td>Rs. 100</td>
+                                        <td>Due</td>
+                                        <td><Span class="status inProgress">In Progress</Span></td>
+                                    </tr> -->
+
+
+
+
+
+
+
+                                    
+                                <!-- <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person1.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="60px">
+                                        <div class="imgBx"><img src="assets/imgs/Person2.png" alt=""></div>
+                                    </td>
+                                    <td>
+                                        <h4>David <br><span>Italy</span></h4>
+                                    </td>
+                                </tr> -->
