@@ -1,0 +1,711 @@
+[
+  {
+    "city": "Colombo",
+    "details": {
+      "address":"No 100, T.B. Jaya Mawatha, Colombo 10",
+      "telephone":"0115521234",
+      "lat":"6.925298382587457",
+      "lng":"79.86183294232882"
+    },
+    "subCities": [
+      {
+        "name": "Aluthmawatha",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Bambalapitiya - Colombo",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Borella",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Cinnamon Gardens",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Colombo 01",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Colombo 02",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Colombo 03",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Colombo 04",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Colombo 05",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Colombo 06",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Colombo 07",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Colombo 08",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Colombo 09",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Colombo 10",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Colombo 11",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Colombo 12",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Colombo 13",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Colombo 14",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Colombo 15",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Dematagoda",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Fort - Colombo",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Gajabapura",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Galle Face",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Gothamipura",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Havelock Town",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Hunupitiya - Colombo",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Ibbanwala",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Jawatte",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Keselwatta - Colombo",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Kollupitiya",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Kompanyaweediya",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Kuppiyawatta",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Kurunduwatta",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Lunupokuna",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Madmpitiya",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Mahawatta",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Maligakanda",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Maradana",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Mattakuliya",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Milagiriya",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Modara",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Narahenpita",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Nawagampura",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Nawam Mawatha",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Obesekarapura",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Orugodawatta",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Panchikawatta",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Pettah",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Polhengoda",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Sedawatta",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Slave Island",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Suduwella",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Thimbirigasyaya",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Thummulla",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Torrington Avenue",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Union Place",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Wadulla",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Wanathamulla",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Wekanda",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Wellawatta",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Wijayapura",
+        "deliveryCharge": 100
+      }
+    ]
+  },
+  {
+    "city": "Dehiwala",
+    "details": {
+      "address":"No 100, Waidya Road, Dehiwala",
+      "telephone":"0111231234",
+      "lat":"6.857148165994383",
+      "lng":"79.868251402696"
+    },
+    "subCities": [
+      {
+        "name": "Dehiwala",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Galwala",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Jayathilaka",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Kalubowila",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Karagampitiya",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Kawdana",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Nedimala",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Sri Saranankara",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Udyanaya",
+        "deliveryCharge": 150
+      }
+    ]
+  }
+  ,
+  {
+    "city": "Kelaniya",
+    "details": {
+      "address":"No 100, Waragoda Road, Kelaniya",
+      "telephone":"0114561234",
+      "lat":"6.9645556",
+      "lng":"79.90075"
+    },
+    "subCities": [
+      {
+        "name": "Dalugama",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Dalugamgoda",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Dippitigoda",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Galborella",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Himbutuwelgoda",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Kelaniya",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Mewella",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Nungamugoda",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Pattiya - Kelaniya",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Peliyagoda",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Pethiyagoda - Kelaniya",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Pilapitiya",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Polhena - Kelaniya",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Sinharamulla",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Wanawasala",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Waragoda",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Wedamulla",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Weweldoowa",
+        "deliveryCharge": 150
+      }
+    ]
+  },
+  {
+    "city": "Gamapaha - Miriswatta",
+    "details": {
+      "address":"No 100, Kandy Road, Miriswatte",
+      "telephone":"0115521234",
+      "lat":"7.07292312174648",
+      "lng":"80.01553088041004"
+    },
+    "subCities": [
+      {
+        "name": "Boraliyawatha",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Galloluwa",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Galthotumulla",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Ihala Yagoda",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Imbulgoda",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Kimbulgoda",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Kinigama",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Kirikittamulla",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Nedungamuwa",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Pepolgahadeniya",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Pituwalgoda",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Rathupaswala",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Siwaralumulla",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Weediyawatta",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Weliweriya",
+        "deliveryCharge": 200
+      }
+    ]
+  },
+  {
+    "city": "Kadawatha",
+    "details": {
+      "address":"No 100, Kadawatha By Pass Road, Kadawatha",
+      "telephone":"0113521234",
+      "lat":"7.00479193645902",
+      "lng":"79.95477155931185"
+    },
+    "subCities": [
+      {
+        "name": "Amunugoda",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Biyanvila",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Dangahawela",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Eldeniya",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Embaraluwa",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Gonahena",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Kadawatha",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Karagahamuna",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Katuwalamulla",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Kirillawala",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Kossinna",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Mahena - Gampaha",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Parakandeniya",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Puwakwetiya",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Ranmuthugala",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Sooriyapaluwa",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Webada",
+        "deliveryCharge": 100
+      }
+    ]
+  },
+  {
+    "city": "Panadura",
+    "details": {
+      "address":"No 100, Horana Road, Panadura",
+      "telephone":"0115521234",
+      "lat":"6.712585158284968",
+      "lng":"79.90812942245257"
+    },
+    "subCities": [
+      {
+        "name": "Alubomulla",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Ambalanduwa",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Aruggoda",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Attambagoda",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Bazaar",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Bekkegama",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Dibbedda",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Diganathuduwa",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Diggala",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Egoda",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Egodauyana",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Eluwila",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Etambagoda",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Fonseka Rd",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Galthude",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Gorakana",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Gorakapola",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Imbullina",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Indigaha",
+        "deliveryCharge": 200
+      }
+    ]
+  },
+  {
+    "city": "Malabe",
+    "details": {
+      "address":"No 100, Kaduwela Road, Malabe",
+      "telephone":"0115521234",
+      "lat":"6.903650018318617",
+      "lng":"79.95647670449479"
+    },
+    "subCities": [
+      {
+        "name": "Arangala",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Evarihena",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Hokandara",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Malabe",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Pothuarawa",
+        "deliveryCharge": 200
+      }
+    ]
+  },
+  {
+    "city": "Gampaha",
+    "details": {
+      "address":"No 100, New Minuwangoda Road, Gampaha",
+      "telephone":"0115421234",
+      "lat":"7.0934806090995535",
+      "lng":"79.99023798426295"
+    },
+    "subCities": [
+      {
+        "name": "Abagahalanda",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Akaravita - Gampaha",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Asgiriwalpola - Gampaha",
+        "deliveryCharge": 120
+      },
+      {
+        "name": "Bandaranayaka Pura - Gampaha",
+        "deliveryCharge": 180
+      },
+      {
+        "name": "Bandarawatta - Gampaha",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Belummahara",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Bendiyamulla",
+        "deliveryCharge": 200
+      },
+      {
+        "name": "Church Road",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Daraluwa",
+        "deliveryCharge": 150
+      },
+      {
+        "name": "Dombawala",
+        "deliveryCharge": 100
+      },
+      {
+        "name": "Doranagoda",
+        "deliveryCharge": 150
+      }
+    ]
+  }
+]
