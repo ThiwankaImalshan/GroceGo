@@ -150,7 +150,7 @@ $( ".hamburger" ).fadeIn();
                         <h3>Customer Care</h3><br>
                         <p><a href="about.php">About US</a></p>
                         <p><a href="services.php">Services</a></p>
-                        <p><a href="product.php">Products</a></p>php
+                        <p><a href="product.php">Products</a></p>
                     </div>
                     <div class="footer-sec footer-sec3">
                         <h3>Contact Us</h3><br>

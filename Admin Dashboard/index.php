@@ -131,20 +131,43 @@
         </div>
     </div>
 
-    <?php
-        if (isset($_POST['Signin'])) {
-            $query = "SELECT * FROM `admin_login` WHERE `Admin_Name`='$_POST[AdminName]' AND `Admin_Password`='$_POST[AdminPassword]' ";
-            $result = mysqli_query($con,$query);
-            if(mysqli_num_rows($result)==1){
-                session_start();
-                $_SESSION['AdminLoginId']=$_POST['AdminName'];
-                header("location: admin_panel.php");
+
+
+
+        <?php
+            require("login_connection.php"); // Ensure you include the database connection
+
+            if (isset($_POST['Signin'])) {
+                // Escape user inputs to prevent SQL injection
+                $adminName = mysqli_real_escape_string($con, $_POST['AdminName']);
+                $adminPassword = mysqli_real_escape_string($con, $_POST['AdminPassword']);
+
+                // Query to fetch admin details
+                $query = "SELECT Admin_Id FROM admin_login WHERE Admin_Name='$adminName' AND Admin_Password='$adminPassword'";
+                $result = mysqli_query($con, $query);
+
+                // Check if exactly one row is returned
+                if (mysqli_num_rows($result) == 1) {
+                    session_start();
+                    
+                    // Fetch the admin ID
+                    $row = mysqli_fetch_assoc($result);
+                    $adminId = $row['Admin_Id'];
+
+                    // Set session variables
+                    $_SESSION['Admin_Id'] = $adminId;
+                    $_SESSION['Admin_Name'] = $adminName; // Optionally store the name for display purposes
+                    $_SESSION['AdminLoginId'] = $adminName;
+
+                    // Redirect to admin panel
+                    header("Location: admin_panel.php");
+                    exit(); // Ensure no further code is executed after redirection
+                } else {
+                    echo "<script>alert('Incorrect User Name or Password');</script>";
+                }
             }
-            else{
-                echo "<script>alert('Incorrect User Name or Password'); </script>";
-            }
-        }
-    ?>
+        ?>
+
 
     <script>
         document.getElementById('switchToSignUp').onclick = function() {
