@@ -79,8 +79,8 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
                                             <i class="fa fa-user-circle-o" aria-hidden="true" id="signin-popup-icon"></i>
                                     <?php endif; ?>
                         </div>
-                        <button class="hamburger rpbtn" >&#9776;</button>
-                        <button class="cross rpbtn" title="Close">&#735;</button>
+                        <!-- <button class="hamburger rpbtn" >&#9776;</button>
+                        <button class="cross rpbtn" title="Close">&#735;</button> -->
                     </ul>
                 </div>
             </div>
@@ -101,15 +101,17 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
             </div>
         </div>
     </header>
+
+    
 <!-----Responsive navigation bar-->
-<div class="menu rpbtn" style="top: 5.8rem; right: 0px; position: fixed">
+<!-- <div class="menu rpbtn" style="top: 5.8rem; right: 0px; position: fixed">
     <ul>
       <a href="index.html"><li>Home</li></a>
       <a href="product.html"><li>Product</li></a>
       <a href="services.html"><li>Service</li></a>
       <a href="about.html"><li>About Us</li></a>
     </ul>
-  </div>
+  </div> -->
   
  
     <div class="promotion-img">

@@ -93,7 +93,7 @@
     <ul>
       <a href="index.php"><li>Home</li></a>
       <a href="product.php"><li>Product</li></a>
-      <a href="services.php"><li>Service</li></a>php
+      <a href="services.php"><li>Service</li></a>
       <a href="about.php"><li>About Us</li></a>
     
     </ul>

@@ -19,18 +19,27 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
+
+
+
+
+
+
+
 // Check if the radio button values are set
 if (isset($_POST['cityName']) && isset($_POST['totalValue']) && isset($_POST['shippingOption'])) {
     $cityName = $_POST['cityName'];
     $totalPrice = $_POST['totalValue'];
     $shippingOption = $_POST['shippingOption'];
+    $shippingCost = $_POST['shippingCost'];
     
     // Get the order details from the AJAX request
     $orderDetails = json_decode($_POST['order-details'], true);
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO orders (order_name, order_email, order_phone, order_price, order_payment, order_status, order_address, order_city, order_postal_code, order_details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssiissssis", $orderName, $orderEmail, $orderPhone, $totalPrice, $orderPayment, $orderStatus, $orderAddress, $orderCity, $orderPostalCode, $orderDetailsJSON);
+    $stmt = $conn->prepare("INSERT INTO orders (order_name, order_email, order_phone, order_price, order_deliveryCharge, order_payment, order_status, order_address, order_city, order_postal_code, order_details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssiiissssis", $orderName, $orderEmail, $orderPhone, $totalPrice, $shippingCost, $orderPayment, $orderStatus, $orderAddress, $orderCity, $orderPostalCode, $orderDetailsJSON);
 
     // Set parameters
     $orderEmail = $orderDetails['email'];
@@ -119,8 +128,22 @@ if (isset($_POST['cityName']) && isset($_POST['totalValue']) && isset($_POST['sh
     echo "Error: Missing data.";
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
- * Function to assign a delivery person to an order and update the deliveries table
+ * Function to assign a delivery person to an order and update the deliveries and orders tables
  */
 function assignDeliveryPerson($conn, $orderId, $cityName) {
     // Query to get an available delivery person for the specific city
@@ -141,11 +164,31 @@ function assignDeliveryPerson($conn, $orderId, $cityName) {
         $updateStmt = $conn->prepare($updateQuery);
         $updateStmt->bind_param("ii", $orderId, $deliveryId);
         if ($updateStmt->execute()) {
+            // Update order status and delivery person in orders table
+            $updateOrderQuery = "UPDATE orders SET order_status = 'In Progress', order_deliver = ? WHERE order_id = ?";
+            $updateOrderStmt = $conn->prepare($updateOrderQuery);
+            $updateOrderStmt->bind_param("si", $deliveryPerson, $orderId);
+            $updateOrderStmt->execute();
+
             return ['name' => $deliveryPerson, 'email' => $deliveryPersonEmail];
         }
     }
     return false;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Function to send email notification
@@ -216,7 +259,7 @@ function sendEmailNotification($orderDetails, $to, $message, $orderId, $isCustom
         $mail->Body    = $messageContent;
 
         $mail->send();
-        echo 'Message has been sent';
+        // echo 'Message has been sent';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

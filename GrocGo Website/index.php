@@ -162,8 +162,8 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
                                 <h3><a href="services.php">Services</a></h3>
                                 <h3><a href="about.php">About Us</a></h3>
 
-                                <button class="hamburger rpbtn">&#9776;</button>
-                                <button class="cross rpbtn" title="Close">&#735;</button>
+                                <!-- <button class="hamburger rpbtn">&#9776;</button>
+                                <button class="cross rpbtn" title="Close">&#735;</button> -->
 
                                 <div class="navbar-cart" title="Cart">
                                     <small>Add to Cart</small>
@@ -263,7 +263,7 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
 
 
                     <!-----Responsive navigation bar-->
-                    <div class="menu rpbtn">
+                    <!-- <div class="menu rpbtn">
                         <ul>
                         <a href="index.php"><li>Home</li></a>
                         <a href="product.php"><li>Product</li></a>
@@ -271,7 +271,8 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
                         <a href="about.php"><li>About Us</li></a>
                         
                         </ul>
-                    </div> 
+                    </div>  -->
+
                     
                     <div class="header-searchbar">
                         <div class="product-search">

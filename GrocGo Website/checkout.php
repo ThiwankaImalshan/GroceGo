@@ -76,8 +76,8 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
                                     <span id="smart-checkout-count" class="badge">0</span>
                                 </i>
                             </div> -->
-              <button class="hamburger rpbtn">&#9776;</button>
-              <button class="cross rpbtn" title="Close">&#735;</button>
+              <!-- <button class="hamburger rpbtn">&#9776;</button>
+              <button class="cross rpbtn" title="Close">&#735;</button> -->
               <div class="navbar-signin nav-sign-icon">
                   <?php if ($isLoggedIn): ?>
                           <img src="img/Customer.png" alt="User Profile Image" id="signin-popup-img">
@@ -91,15 +91,17 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
       </div>
     </header>
     <br />
+
     <!-----Responsive navigation bar-->
-    <div class="menu rpbtn" style="top: 6rem; right: 0px; position: fixed">
+    <!-- <div class="menu rpbtn" style="top: 6rem; right: 0px; position: fixed">
       <ul>
         <a href="index.php"><li>Home</li></a>
         <a href="product.php"><li>Product</li></a>
         <a href="services.php"><li>Service</li></a>
         <a href="about.php"><li>About Us</li></a>
       </ul>
-    </div>
+    </div> -->
+    
     <script>
       $(document).ready(function () {
         $(".cross").hide();
@@ -256,7 +258,7 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
             <div class="order-price-calculations" id="price-div-2">
               <p>Sub Total : <span id="sub-total"></span></p>
               <p id="shipping-charge">
-                Shipping Charge : <span id="shipping-cost"></span>
+                Delivery Charge : <span id="shipping-cost"></span>
               </p>
             </div>
             <h6 id="price-div-3">Total : <span id="full-total"></span></h6>
@@ -264,6 +266,7 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
             <input type="hidden" id="cityNameInput" name="cityName">
             <input type="hidden" id="totalValueInput" name="totalValue">
             <input type="hidden" id="shippingOptionInput" name="shippingOption">
+            <input type="hidden" id="hidden-shipping-cost" name="shippingCost" value="">
             <div class="btn-place-your-order" id="price-div-4">
               <button type="submit" id="submit-order-btn">Place Your Order</button>
             </div>
@@ -937,7 +940,7 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
                 fullTotalDiv.textContent = "Rs." + totalValue;
 
                 // Set the total value to the hidden input field
-                totalValueInput.value = totalValue;
+                totalValueInput.value = subTotal;
             }
         } else if (radioInput1.checked) {
             shipping_Charge.style.display = "none";
@@ -999,6 +1002,24 @@ $isLoggedIn = isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]; // Check if
 
       // Initial update when page loads
       updateRadioButtons();
+
+      
+
+
+
+
+
+      document.getElementById('radio2').addEventListener('change', function() {
+          if (this.checked) {
+              // Get the shipping cost value
+              var shippingCostText = document.getElementById('shipping-cost').innerText;
+              // Extract only the numeric value using a regular expression
+              var shippingCost = shippingCostText.match(/\d+(\.\d{1,2})?/)[0];
+              // Set the value of the hidden input
+              document.getElementById('hidden-shipping-cost').value = shippingCost;
+          }
+      });
+
     </script>
     <script src="shopping-cart.js"></script>
   </body>
