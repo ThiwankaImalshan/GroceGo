@@ -49,6 +49,8 @@ $conn->close();
 
         <title>Delivery Dashboard</title>
 
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
         <style>
             .num-plate {
                 display: flex;
@@ -77,6 +79,96 @@ $conn->close();
                     max-height: 80%;     /* Adjust the image size relative to the container */
                 }
             }
+            /* Label Styling */
+            #profile-vehicle + label {
+                display: block;
+                font-size: 14px;
+                color: #555;
+                margin-bottom: 5px;
+            }
+
+            /* Select Box Styling */
+            #profile-vehicle {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 14px;
+                background-color: #fff;
+                background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5"><path fill="%23333" d="M0 0l5 5 5-5z"/></svg>'); /* Downward arrow icon */
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 10px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+            /* Select Box Focus and Hover Styling */
+            #profile-vehicle:focus {
+                border-color: #51ac37; /* Focus border color */
+                outline: none;
+            }
+
+            #profile-vehicle:hover {
+                border-color: #aaa; /* Hover border color */
+            }
+
+
+
+
+
+        /* Container Styling */
+        .logout-container {
+            background-color: #fff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Background shadow */
+            padding: 20px; /* Padding inside the container */
+            max-width: 400px; /* Maximum width of the container */
+            margin: 50px auto; /* Center the container horizontally and add top margin */
+            text-align: center; /* Center-align text inside the container */
+        }
+
+        /* Heading Styling */
+        .logout-heading {
+            font-size: 24px; /* Heading font size */
+            margin-bottom: 10px; /* Space below the heading */
+            color: #333; /* Heading text color */
+        }
+
+        /* Description Styling */
+        .logout-description {
+            font-size: 16px; /* Description font size */
+            color: #666; /* Description text color */
+            margin-bottom: 20px; /* Space below the description */
+        }
+
+        /* Button Styling */
+        .logout-button {
+            background-color: #51ac37; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            border: none; /* Remove default button border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Button text size */
+            display: flex; /* Flexbox layout */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            margin: 0 auto; /* Center the button horizontally */
+        }
+
+        /* Icon Styling */
+        .logout-button i {
+            margin-right: 10px; /* Space between icon and text */
+        }
+
+        /* Button Hover Styling */
+        .logout-button:hover {
+            background-color: #3a8c2a; /* Darker background on hover */
+        }
+
+           
         </style>
     </head>
     <body>
@@ -138,7 +230,7 @@ $conn->close();
                             <span class="sidebar__link-floating">Settings</span>
                         </a>
 
-                        <a href="index.php" class="sidebar__link">
+                        <a href="logout.php" class="sidebar__link" data-target="main-logout">
                             <i class="ri-logout-box-r-line"></i>
                             <span class="sidebar__link-name">Logout</span>
                             <span class="sidebar__link-floating">logout</span>
@@ -160,7 +252,7 @@ $conn->close();
                 <!-- </div> -->
 
                 <div class="sidebar__account">
-                    <img src="pro_pic/<?php echo htmlspecialchars($deliver_photo); ?>" alt="Sidebar image" class="sidebar__perfil">
+                    <img src="pro_pic/<?php echo htmlspecialchars($deliver_photo); ?>" alt="" class="sidebar__perfil">
                     <div class="sidebar__names">
                         <h3 class="sidebar__name"><?php echo htmlspecialchars($deliver_name); ?></h3>
                         <span class="sidebar__email"><?php echo htmlspecialchars($deliver_email); ?></span>
@@ -184,7 +276,7 @@ $conn->close();
                                 <h2 class="profile-name">John Doe</h2>
                                 <p class="profile-id">ID: 123456</p>
                             </div> -->
-                            <img src="pro_pic/<?php echo htmlspecialchars($deliver_photo); ?>" alt="Profile Picture" class="profile-pic">
+                            <img src="pro_pic/<?php echo htmlspecialchars($deliver_photo); ?>" alt="" class="profile-pic">
                                 <div class="profile-text">
                                     <h2 class="profile-name"><?php echo htmlspecialchars($deliver_name); ?></h2>
                                     <p class="profile-id">ID: <?php echo htmlspecialchars($deliver_id); ?></p>
@@ -908,55 +1000,58 @@ $conn->close();
 
 
             <div id="main-income" class="main-content" style="display: none;">
-                <!-- Monthly Income Chart and Descriptive Section -->
-                <div class="income-section">
-                    <!-- Monthly Income Chart -->
-                    <div class="chart-container">
-                        <h2>Latest Orders Income Chart</h2>
-                        <canvas id="incomeChart"></canvas> <!-- Chart.js canvas element -->
-                    </div>
+            <!-- Monthly Income Chart and Descriptive Section -->
+            <div class="income-section">
+                <!-- Monthly Income Chart -->
+                <div class="chart-container">
+                    <h2>Latest Orders Income Chart</h2>
+                    <canvas id="incomeChart"></canvas> <!-- Chart.js canvas element -->
+                </div>
 
-                    <!-- Descriptive Section for Calculating All Order Delivery Income -->
-                    <!-- <div class="income-details">
-                        <h3>Total Delivery Income</h3>
-                        <p id="totalIncome">0.00</p> Display total income here -->
-                        <!-- <button onclick="calculateTotalIncome()">Calculate Total Income</button>
-                    </div> -->
+                <?php
+                // Include the database connection
+                require 'config.php';
 
+                // Ensure the session is started
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
 
-                    <?php
-                    // Include the database connection
-                    require 'config.php';
+                // Check if deliver_name is set in the session
+                if (!isset($_SESSION['deliver_name'])) {
+                    echo "<p>Error: Deliver name not set in session.</p>";
+                    exit();
+                }
 
-                    // Ensure the session is started
-                    if (session_status() === PHP_SESSION_NONE) {
-                        session_start();
-                    }
+                $deliver_name = $_SESSION['deliver_name'];
 
-                    // Fetch the total delivery income from the orders table
-                    $sql = "SELECT SUM(order_deliveryCharge) AS totalIncome FROM orders";
-                    $result = $conn->query($sql);
+                // Fetch the total delivery income from the orders table for the logged-in deliverer
+                $sql = "SELECT SUM(order_deliveryCharge) AS totalIncome FROM orders WHERE order_deliver = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param('s', $deliver_name);
+                $stmt->execute();
+                $result = $stmt->get_result();
 
-                    $totalIncome = 0;
-                    if ($result) {
-                        $row = $result->fetch_assoc();
-                        $totalIncome = $row['totalIncome'];
-                    }
+                $totalIncome = 0;
+                if ($result) {
+                    $row = $result->fetch_assoc();
+                    $totalIncome = $row['totalIncome'];
+                }
 
-                    // Close the connection
-                    $conn->close();
-                    ?>
+                // Close the statement and connection
+                $stmt->close();
+                $conn->close();
+                ?>
 
-                    <!-- Descriptive Section for Calculating All Order Delivery Income -->
-                    <div class="income-details">
-                        <h3>Total Delivery Income</h3>
-                        <p id="totalIncome">Rs.<?php echo number_format($totalIncome, 2); ?></p> <!-- Display total income here -->
-                        <button>Request Payment</button>
-                    </div>
-
-
+                <!-- Descriptive Section for Calculating All Order Delivery Income -->
+                <div class="income-details">
+                    <h3>Total Delivery Income</h3>
+                    <p id="totalIncome">Rs.<?php echo number_format($totalIncome, 2); ?></p> <!-- Display total income here -->
+                    <button>Request Payment</button>
                 </div>
             </div>
+        </div>
+
 
 
 
@@ -1015,7 +1110,7 @@ $conn->close();
             <!-- User Profile Section -->
             <div class="profile-container">
                 <div class="profile-header">
-                    <img src="pro_pic/<?php echo $profile_pic; ?>" alt="Profile Picture" class="profile-pic">
+                    <img src="pro_pic/<?php echo $profile_pic; ?>" alt="" class="profile-pic">
                     <div class="profile-info">
                         <h2 class="profile-name"><?php echo $profile_name; ?></h2>
                         <p class="profile-email"><?php echo $profile_email; ?></p>
@@ -1087,9 +1182,15 @@ $conn->close();
                             <label for="profile-email">Email</label>
                             <input type="email" id="profile-email" name="profile-email" required>
                     
+                            <!-- <label for="profile-vehicle">Vehicle</label>
+                            <input type="text" id="profile-vehicle" name="profile-vehicle" required> -->
                             <label for="profile-vehicle">Vehicle</label>
-                            <input type="text" id="profile-vehicle" name="profile-vehicle" required>
-                    
+                            <select id="profile-vehicle" name="profile-vehicle" required>
+                                <option value="Threewheeler">Threewheeler</option>
+                                <option value="Bike">Bike</option>
+                                <option value="Truck">Truck</option>
+                            </select>
+
                             <button type="submit" class="btn-submit">Update</button>
                             <button type="button" class="btn-close" onclick="closeModal()">Close</button>
                         </form>
@@ -1226,7 +1327,27 @@ $conn->close();
                 </script>
 
             </div>
+
+
+
+            <div id="main-logout" class="main-content" style="display: none;">
+
+                <div class="logout-container">
+                    <h2 class="logout-heading">Logout</h2>
+                    <p class="logout-description">You are about to log out from your account. Click the button below to proceed.</p>
+                    <form action="logout.php" method="POST">
+                        <button type="submit" class="logout-button">
+                            <i class="ri-logout-box-r-line"></i>
+                            <span class="logout-button-text">Logout</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
             
+
+
+
          </main>
 
 
@@ -1406,7 +1527,6 @@ $conn->close();
             })
             .catch(error => console.error('Error fetching delivery charges:', error));
     });
-
 
 
 

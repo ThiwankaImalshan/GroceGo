@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Deliver</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <style>
         /* Basic Reset */
         body {
@@ -62,7 +63,7 @@
             margin-bottom: 5px;
         }
 
-        .form-group input {
+        .form-group input, .form-group select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
@@ -126,7 +127,7 @@
                 font-size: 13px; /* Smaller label text */
             }
 
-            .form-group input {
+            .form-group input, .form-group select {
                 font-size: 14px; /* Smaller input text */
                 padding: 8px; /* Adjust input padding */
             }
@@ -136,40 +137,52 @@
                 padding: 12px; /* Adjust button padding */
             }
         }
-
     </style>
 </head>
 <body>
     <div class="signup-container">
-        <!-- <div class="logo">
-            <img src="assets/img/logo-colored.png" alt="Deliver Logo">
-        </div> -->
         <h1 class="heading">Sign Up</h1>
-        <form class="signup-form">
+        <form class="signup-form" action="signup_process.php" method="POST">
             <div class="form-group">
-                <!-- <label for="fullname">Full Name</label> -->
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required>
-            </div>
-            <div class="form-group">
-                <!-- <label for="email">Email</label> -->
-                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-            </div>
-            <div class="form-group">
-                <!-- <label for="username">Username</label> -->
                 <input type="text" id="username" name="username" placeholder="Choose a Username" required>
             </div>
             <div class="form-group">
-                <!-- <label for="password">Password</label> -->
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group">
                 <input type="password" id="password" name="password" placeholder="Create a Password" required>
             </div>
             <div class="form-group">
-                <!-- <label for="confirm-password">Confirm Password</label> -->
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your Password" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="contact" name="contact" placeholder="Enter your Contact Number" required>
+            </div>
+            <div class="form-group">
+                <label for="vehicle-type">Preferred Vehicle Type</label>
+                <select id="vehicle-type" name="vehicle-type" required>
+                    <option value="Threewheeler">Threewheeler</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Truck">Truck</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <select id="branch" name="branch" required>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Dehiwala">Dehiwala</option>
+                    <option value="Kelaniya">Kelaniya</option>
+                    <option value="Gampaha-Miriswatta">Gampaha - Miriswatta</option>
+                    <option value="Kadawatha">Kadawatha</option>
+                    <option value="Panadura">Panadura</option>
+                    <option value="Malabe">Malabe</option>
+                    <option value="Gampaha">Gampaha</option>
+                </select>
             </div>
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
         <div class="signin-link">
-            <p>Already have an account? <a href="#">Sign in here</a></p>
+            <p>Already have an account? <a href="index.php">Sign in here</a></p>
         </div>
     </div>
 </body>

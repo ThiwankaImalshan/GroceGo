@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <style>
         /* Basic Reset */
         body {
@@ -185,7 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" class="signin-button">Sign In</button>
         </form>
         <div class="register-link">
-            <p>Don't have an account? <a href="#">Register here</a></p>
+            <p>Don't have an account? <a href="sign_up.php">Register here</a></p>
         </div>
     </div>
 </body>
