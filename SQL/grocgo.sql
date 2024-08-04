@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2024 at 03:01 PM
+-- Generation Time: Aug 04, 2024 at 05:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -198,24 +198,35 @@ INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_photo`, `cust
 CREATE TABLE `delivers` (
   `deliver_id` int(11) NOT NULL,
   `deliver_name` varchar(60) NOT NULL,
+  `deliver_password` varchar(60) NOT NULL,
+  `deliver_email` varchar(60) NOT NULL,
   `delivery_contact` varchar(60) NOT NULL,
   `deliver_photo` varchar(60) NOT NULL,
+  `deliver_vehicle` varchar(60) NOT NULL,
+  `deliver_numplate` varchar(60) NOT NULL,
   `deliver_from` varchar(60) NOT NULL,
   `deliver_status` varchar(60) NOT NULL,
-  `order_id` int(60) NOT NULL
+  `order_id` int(60) NOT NULL,
+  `confirmation_code` varchar(32) DEFAULT NULL,
+  `confirmed` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `delivers`
 --
 
-INSERT INTO `delivers` (`deliver_id`, `deliver_name`, `delivery_contact`, `deliver_photo`, `deliver_from`, `deliver_status`, `order_id`) VALUES
-(1, 'Kasun', '0712345678', 'Person1.png', 'Colombo', 'assigned', 44),
-(2, 'Manel', '0766123456', 'Person2.png', 'Panadura', 'available', 28),
-(3, 'Pramod', '0712345678', 'Person3.jpg', 'Dehiwala', 'available', 0),
-(4, 'Tharusha', '0766123456', 'ProfilePic1.jpg', 'Kelaniya', 'available', 0),
-(5, 'Lakshan', '0712345678', 'ProfilePic2.avif', 'Gampaha', 'available', 0),
-(6, 'Roshan', '0766123456', 'ProfilePic4.jpg', 'Malabe', 'available', 0);
+INSERT INTO `delivers` (`deliver_id`, `deliver_name`, `deliver_password`, `deliver_email`, `delivery_contact`, `deliver_photo`, `deliver_vehicle`, `deliver_numplate`, `deliver_from`, `deliver_status`, `order_id`, `confirmation_code`, `confirmed`) VALUES
+(1001, 'Kasun', '12345', 'kasun@gmail.com', '0712345678', 'Person1.png', 'Threewheeler', '', 'Colombo', 'assigned', 70, NULL, 0),
+(1002, 'Manel', '12345', 'manel@gmail.com', '0766123456', 'profile_66a4cbd7ef9e78.95228954.jpg', 'Bike', 'NumPlate.png', 'Panadura', 'assigned', 64, NULL, 0),
+(1003, 'Pramod', '12345', 'pramod@gmail.com', '0712345678', 'Person3.jpg', 'Truck', '', 'Dehiwala', 'assigned', 87, NULL, 0),
+(1004, 'Tharusha', '12345', 'tharusha@gmail.com', '0766123456', 'ProfilePic1.jpg', 'Threewheeler', '', 'Kelaniya', 'assigned', 70, NULL, 0),
+(1005, 'Lakshan', '12345', 'lakshan@gmail.com', '0712345678', 'ProfilePic2.avif', 'Truck', '', 'Gampaha', 'available', 0, NULL, 0),
+(1006, 'Roshan', '12345', 'roshan@gmail.com', '0766123456', 'ProfilePic4.jpg', 'Bike', '', 'Malabe', 'assigned', 88, NULL, 0),
+(1012, 'Thiwanka', '12345', 'thiwankaimalshan64@gmail.com', '0710441234', 'DefaultPro.png', 'Threewheeler', '', 'Colombo', 'assigned', 80, '18f1d0ec640968034414fb2cf8896db8', 1),
+(1013, 'Imalshan', '12345', 'thiwankaimalshan2001@gmail.com', '0710445678', 'DefaultPro.png', 'Bike', '', 'Dehiwala', '', 0, '0378d187a70855aaaede2198edf8be92', 1),
+(1015, 'Anura', '12345', 'thiwankaimalshan64@gmail.com', '0712345678', 'DefaultPro.png', 'Truck', '', 'Gampaha', '', 0, 'f7a35c46baa723bf46781c10f2409d5e', 0),
+(1017, 'Kamindu', '12345', 'thiwankaimalshan64@gmail.com', '0712345678', 'DefaultPro.png', 'Threewheeler', '', 'Colombo', '', 0, '5708cbe80905115816bd405b431a609f', 0),
+(1019, 'Silva', '12345', 'thiwankaimalshan64@gmail.com', '0710441234', 'DefaultPro.png', 'Bike', '', 'Kelaniya', 'unavailable', 0, '944a0f859859b1b2142770564d773b5e', 1);
 
 -- --------------------------------------------------------
 
@@ -253,20 +264,35 @@ CREATE TABLE `orders` (
   `order_email` varchar(60) NOT NULL,
   `order_phone` int(60) NOT NULL,
   `order_price` int(60) NOT NULL,
+  `order_deliveryCharge` int(60) NOT NULL,
   `order_payment` varchar(60) NOT NULL,
   `order_status` varchar(60) NOT NULL,
   `order_address` varchar(100) NOT NULL,
   `order_city` varchar(60) NOT NULL,
   `order_postal_code` int(60) NOT NULL,
-  `order_details` varchar(1000) NOT NULL
+  `order_details` varchar(1000) NOT NULL,
+  `order_deliver` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `order_name`, `order_email`, `order_phone`, `order_price`, `order_payment`, `order_status`, `order_address`, `order_city`, `order_postal_code`, `order_details`) VALUES
-(62, 'Amal Nishantha', 'amalnishantha@gmail.com', 761234567, 1770, 'Due', 'Pending', 'No 10, Walmert Road, Colombo 10.', 'colombo 10', 1000, '[{\"product_id\":\"39\",\"quantity\":2},{\"product_id\":\"40\",\"quantity\":3}]');
+INSERT INTO `orders` (`order_id`, `order_name`, `order_email`, `order_phone`, `order_price`, `order_deliveryCharge`, `order_payment`, `order_status`, `order_address`, `order_city`, `order_postal_code`, `order_details`, `order_deliver`) VALUES
+(62, 'Amal Nishantha', 'amalnishantha@gmail.com', 761234567, 1770, 150, 'Paid', 'Delivered', 'No 10, Walmert Road, Colombo 10.', 'colombo 10', 1000, '[{\"product_id\":\"39\",\"quantity\":2},{\"product_id\":\"40\",\"quantity\":3}]', 'Manel'),
+(63, 'Kamindu Mendis', 'kamindumendis@gmail.com', 112345678, 550, 150, 'Paid', 'Delivered', 'No 10, Kawdana Road, Dehiwala.', 'kawdana', 10350, '[{\"product_id\":\"9\",\"quantity\":2},{\"product_id\":\"7\",\"quantity\":1}]', 'Kasun'),
+(64, 'Nayanathara Alwiz', 'nayanatharaalwiz@gmail.com', 112345678, 180, 100, 'Paid', 'Delivered', 'No 10, Waidya Road, Dehiwala.', 'dehiwala', 10370, '[{\"product_id\":\"7\",\"quantity\":2}]', 'Manel'),
+(65, 'Adithya Gamlath', 'adithyagamlath@gmail.com', 112345678, 380, 100, 'Due', 'Pending', 'No 10, Fonseka Road, Panadura.', 'fonseka rd', 10400, '[{\"product_id\":\"7\",\"quantity\":2}]', 'Kasun'),
+(66, 'Gauri Amasha', 'gauriamasha@gmail.com', 112345678, 180, 200, 'Due', 'Pending', 'No 10, Station Road, Bambalapitiya.', 'bambalapitiya - colombo', 300, '[{\"product_id\":\"7\",\"quantity\":2}]', ''),
+(67, 'Himasha Sewmini', 'himashasewmini', 712345678, 1980, 200, 'Paid', 'Delivered', 'No, 460, Galle Road, Colombo', 'bambalapitiya - colombo', 300, '[{\"product_id\":\"7\",\"quantity\":2},{\"product_id\":\"33\",\"quantity\":1},{\"product_id\":\"37\",\"quantity\":1}]', 'Manel'),
+(68, 'Arawinda Silva', 'arawindasilva@gmail.com', 712345678, 2240, 200, 'Due', 'Pending', 'No, 100, Waragoda Road, Kelaniya', 'waragoda', 11300, '[{\"product_id\":\"7\",\"quantity\":1},{\"product_id\":\"33\",\"quantity\":2}]', ''),
+(69, 'Arawinda Silva', 'arawindasilva@gmail.com', 712345678, 2290, 150, 'Due', 'Pending', 'No 100, Waragoda Road, Kelaniya', 'waragoda', 11400, '[{\"product_id\":\"7\",\"quantity\":1},{\"product_id\":\"33\",\"quantity\":2}]', 'Manel'),
+(70, 'Arawinda Silva', 'arawindasilva@gmail.com', 712345678, 2290, 150, 'Due', 'Pending', 'No 100, Waragoda Road, Kelaniya', 'waragoda', 11400, '[{\"product_id\":\"7\",\"quantity\":1},{\"product_id\":\"33\",\"quantity\":2}]', ''),
+(71, 'Sanjeewa Perera', 'sanjeewa.perera@gmail.com', 771234567, 2218, 180, 'Due', 'Pending', 'No. 123, Galle Road, Colombo 03', 'colombo 03', 300, '[{\"product_id\":\"82\",\"quantity\":1},{\"product_id\":\"81\",\"quantity\":1},{\"product_id\":\"83\",\"quantity\":1},{\"product_id\":\"89\",\"quantity\":1},{\"product_id\":\"90\",\"quantity\":1},{\"product_id\":\"91\",\"quantity\":1}]', ''),
+(72, 'Sanjaya Perera', 'sanjaya.perera@gmail.com', 771234567, 1005, 200, 'Due', 'Pending', 'No. 123, Galle Road, Colombo 03', 'colombo 03', 300, '[{\"product_id\":\"82\",\"quantity\":1},{\"product_id\":\"81\",\"quantity\":1},{\"product_id\":\"83\",\"quantity\":1}]', ''),
+(73, 'Sandanari Umayangana', 'sandanariproduction@gmail.com', 771234567, 1005, 130, 'Due', 'Pending', 'No. 123, Galle Road, Kollupitiya', 'kollupitiya', 300, '[{\"product_id\":\"82\",\"quantity\":1},{\"product_id\":\"81\",\"quantity\":1},{\"product_id\":\"83\",\"quantity\":1}]', ''),
+(74, 'Asanka Fernando', 'thiwankaimalshan2001@gmail.com', 712345678, 725, 100, 'Due', 'Pending', 'No, 100, Niwadawa Road, Aruggoda.', 'aruggoda', 12524, '[{\"product_id\":\"81\",\"quantity\":1},{\"product_id\":\"83\",\"quantity\":1}]', ''),
+(75, 'Supun Hansaka', 'supunhansaka@gmail.com', 701234567, 2060, 150, 'Due', 'Pending', 'No 100, Niwdawa Road, Pinwala', 'kompanyaweediya', 70016, '[{\"product_id\":\"1\",\"quantity\":1},{\"product_id\":\"3\",\"quantity\":2}]', '');
 
 -- --------------------------------------------------------
 
@@ -414,7 +440,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `delivers`
 --
 ALTER TABLE `delivers`
-  MODIFY `deliver_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `deliver_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1023;
 
 --
 -- AUTO_INCREMENT for table `delivery_details`
@@ -426,7 +452,7 @@ ALTER TABLE `delivery_details`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
 -- AUTO_INCREMENT for table `products`

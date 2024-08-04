@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2024 at 03:01 PM
+-- Generation Time: Aug 04, 2024 at 05:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -43,7 +43,7 @@ CREATE TABLE `admin_login` (
 INSERT INTO `admin_login` (`Admin_Id`, `Admin_Photo`, `Admin_Name`, `Admin_Password`, `Admin_Email`, `Admin_Phone`) VALUES
 (1, 'AdminPic1.jpg', 'Avishka', '12345', 'pramodhavishka@gmail.com', '0712345678'),
 (2, 'AdminPic2.jpg', 'Dunith', '12345', 'sandikadunith@gmail.com', '0712345678'),
-(3, 'AdminPic3.jpg', 'Thiwanka', '12345', 'thiwankaimalshan@gmail.com', '0712345678'),
+(3, 'Adminpic5.jpg', 'Thiwanka', '12345', 'thiwankaimalshan@gmail.com', '0712345678'),
 (4, 'AdminPic4.jpg', 'Dulanjana', '12345', 'dulanjanamendis@gmail.com', '0712345678');
 
 --
