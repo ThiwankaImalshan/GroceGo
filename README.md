@@ -2,7 +2,7 @@
 
 GrocGo is a cutting-edge supermarket delivery platform designed to revolutionize your grocery shopping experience. Our platform provides a seamless and user-friendly interface for customers, an efficient management system for supermarket admins, and essential tools for deliverers to ensure timely and reliable service.
 
-![GrocGo Logo](Deliver Dashboard/assets/img/logo-colored.png)
+[GrocGo Logo](Deliver Dashboard/assets/img/logo-colored.png)
 
 ## Features
 
@@ -55,13 +55,13 @@ GrocGo is a cutting-edge supermarket delivery platform designed to revolutionize
 ## Screenshots
 
 ### Customer Interface
-![Customer Interface](Deliver Dashboard/assets/img/customer_interface.png)
+[Customer Interface](Deliver Dashboard/assets/img/customer_interface.png)
 
 ### Admin Panel
-![Admin Panel](Deliver Dashboard/assets/img/Admin_panel.png)
+[Admin Panel](Deliver Dashboard/assets/img/Admin_panel.png)
 
 ### Delivery Dashboard
-![Delivery Dashboard](Deliver Dashboard/assets/img/Delivery_Dashboard.png)
+[Delivery Dashboard](Deliver Dashboard/assets/img/Delivery_Dashboard.png)
 
 ## Installation
 
@@ -71,4 +71,4 @@ To get started with GrocGo, follow these steps:
    ```sh
    git clone https://github.com/ThiwankaImalshan/GroceGo.git
 
-## Credit and Owner : Thiwanka Imalshan
+## Credit and Owner : **Thiwanka Imalshan**
