@@ -1,3 +1,7 @@
 [submodule "GrocGo Website/vendor/phpmailer/phpmailer"]
     path = GrocGo Website/vendor/phpmailer/phpmailer
     url = https://github.com/PHPMailer/PHPMailer.git
+
+[submodule "GrocGo Website/vendor/setasign/fpdf"]
+    path = GrocGo Website/vendor/setasign/fpdf
+    url = https://github.com/setasign/fpdf.git
